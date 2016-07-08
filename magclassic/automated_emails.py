@@ -16,7 +16,7 @@ AutomatedEmail(Attendee, 'MAGFest Volunteer Food', 'volunteer_food_info.txt',
            sender="MAGFest Staff Suite <chefs@magfest.org>")
 AutomatedEmail(Attendee, 'MAGClassic Check-in Barcode', 'checkin_barcode.html',
                lambda a: a.badge_status == c.COMPLETED_STATUS,
-               date_filters = days_before(7, c.FINAL_EMAIL_DEADLINE))
+               date_filters=days_before(7, c.FINAL_EMAIL_DEADLINE))
 AutomatedEmail(Attendee, 'MAGClassic FAQ', 'prefest_faq.html',
                lambda a: a.badge_status == c.COMPLETED_STATUS,
                date_filters=days_before(7, c.FINAL_EMAIL_DEADLINE))
