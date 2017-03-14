@@ -1,9 +1,5 @@
 from magclassic import *
 
-# With "MAGFest Laboratories" as a new event, we find that the phrasing "Want to staff again?"
-# doesn't differentiate this event, so we change it to just plain "Want to staff?"
-if 'volunteer_again_inquiry' in AutomatedEmail.instances:
-    AutomatedEmail.instances['volunteer_again_inquiry'].subject = 'Want to staff {}?'.format(c.EVENT_NAME)
 
 AutomatedEmail(Attendee, '{EVENT_NAME} food for guests', 'guest_food_restrictions.txt',
            lambda a: a.badge_type == c.GUEST_BADGE,
