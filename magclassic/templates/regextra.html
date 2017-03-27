@@ -2,8 +2,8 @@
     if (window.BADGE_TYPES) {
         window.BADGE_TYPES.options[0].description = 'Allows access to the festival for its duration ({{ c.EPOCH|datetime:"%b %-d" }}-{{ c.ESCHATON|datetime:"%b %-d" }}). {% price_notice "Preregistration" c.PREREG_TAKEDOWN %}';
         $(function() {
-            if ($.field('amount_extra')) {
-                $.field('amount_extra').parents('.form-group').hide()
+            if ($(".badge-type-selector").size()) {
+                $(".badge-type-selector").parents('.form-group').hide();
             }
         })
     }
