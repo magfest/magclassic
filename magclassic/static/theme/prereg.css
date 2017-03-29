@@ -5,10 +5,11 @@
     background-size: contain;
 }
 
-.masthead img{
+.masthead img {
+    opacity: 0;
     vertical-align: top;
     width: 100%;
-    opacity: 0;
+    content: url(../theme/banner.png);
 }
 
 #mainContainer{
