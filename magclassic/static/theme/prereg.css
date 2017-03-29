@@ -1,8 +1,14 @@
 .masthead {
-    height:325px;
     background-image:url("../theme/banner.png");
     background-repeat:no-repeat;
     background-position: center;
+    background-size: contain;
+}
+
+.masthead img{
+    vertical-align: top;
+    width: 100%;
+    opacity: 0;
 }
 
 #mainContainer{
