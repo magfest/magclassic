@@ -10,4 +10,4 @@ class Root:
 
     @ajax_gettable
     def badge_stats(self):
-        return {'sold': random.randint(1, 100)}
+        return {'sold': c.BADGES_SOLD}
