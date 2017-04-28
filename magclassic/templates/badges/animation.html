@@ -98,7 +98,7 @@ p {
 <script>
     setInterval(function() {
         $.ajax({
-            url: '../badge_stats',
+            url: '../stats',
             success: function(result) {
                 var $sold = $('#sold');
                 if ($sold.html() != result.sold) {
