@@ -1,4 +1,3 @@
-import random
 from uber.common import *
 
 
