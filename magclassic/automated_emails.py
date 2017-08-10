@@ -11,4 +11,4 @@ AutomatedEmail(Attendee, '{EVENT_NAME} FAQ', 'prefest_faq.html',
 
 AutomatedEmail(Room, '{EVENT_NAME} Hotel Room Assignment Update', 'room_assignment_update.txt', lambda r: r.locked_in,
                sender=c.ROOM_EMAIL_SENDER,
-               ident='hotel_room_assignment')
+               ident='hotel_room_assignment_update')
