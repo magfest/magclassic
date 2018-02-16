@@ -1,4 +1,4 @@
-{{ room.first_names|join_and }},
+{{ room.first_names|readable_join }},
 
 This email is to confirm your upcoming {{ c.EVENT_NAME }} hotel staff room assignments.  Changes were made following the original email, so please use this communication as your confirmed roommates for the event. Your roommates are listed below, so please take a moment to look over the information.
 You can check in at the hotel front desk starting at {{ c.CHECK_IN_TIME }} on {{ room.check_in_date|datetime("%A, %b %-d") }}.
