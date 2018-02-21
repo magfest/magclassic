@@ -1,4 +1,5 @@
-from uber.common import *
+from uber.config import c
+from uber.decorators import ajax_gettable, all_renderable, unrestricted
 
 
 @all_renderable(c.PEOPLE, c.REG_AT_CON)
