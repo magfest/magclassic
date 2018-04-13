@@ -2,6 +2,7 @@
     background-size: 50% auto;
     padding-top: 33%;  /* The height is 36.95% of the width (300px / 812px) */
 }
+
 body {
    font-family: "Courier New", Courier, monospace;
    font-size: 16px;
@@ -13,15 +14,21 @@ body {
    background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
    background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
 }
+
 input {
     background-color: #001122;
     border-style: inset;
 }
+
 .panel-default {
-	border-style: inset;
-	border-width: 2px;
+    border-style: inset;
+    border-width: 2px;
 }
 
 .btn-inline ul {
-	font-size: 90%;
+    font-size: 90%;
+}
+
+.btn-inline li a {
+    white-space: normal;
 }
