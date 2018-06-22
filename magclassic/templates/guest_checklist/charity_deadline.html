@@ -1,0 +1,26 @@
+{% extends "guest_checklist/charity_deadline.html" %}
+
+{% if snippet %}
+  {% block deadline_headline %}Donating to our Charity Raffle{% endblock %}
+  {% block deadline_text %}
+    {% if guest.charity_status %}
+      You have already indicated your charity preferences, but you may update
+      them using the link above.
+    {% else %}
+      {{ c.EVENT_NAME }} runs a yearly charity raffle, and we need you to tell
+      us whether you can contribute any signed merchandise.
+    {% endif %}
+  {% endblock %}
+{% else %}
+  {% block form_desc %}
+    {{ c.EVENT_NAME }} hosts a yearly charity raffle, with 100% of proceeds going to
+    <a target="_blank" href="http://childsplaycharity.org/">Child's Play</a>.
+    Do you have any cool stuff you can sign that you think would make a good
+    prize for the raffle?  Our attendees love it when performers they admire
+    sign stuff! If you've got anything to donate, please tell us what it is!
+
+    <br/> <br/>
+
+    The raffle ends with drawings in the early afternoon on Sunday.
+  {% endblock %}
+{% endif %}

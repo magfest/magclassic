@@ -1,7 +1,22 @@
 from uber.automated_emails import AutomatedEmailFixture
 from uber.config import c
 from uber.models import Attendee, Room
+from uber.models import email
 from uber.utils import days_before
+
+
+# Janky monkeypatch AutomatedEmail.reconcile to fix hardcoded subjects.
+_original_AutomatedEmail_reconcile = email.AutomatedEmail.reconcile
+
+
+def _AutomatedEmail_reconcile(self, fixture):
+    _original_AutomatedEmail_reconcile(self, fixture)
+    if self.ident == 'band_charity_reminder':
+        self.subject = '{} charity raffle reminder'.format(c.EVENT_NAME)
+    return self
+
+
+email.AutomatedEmail.reconcile = _AutomatedEmail_reconcile
 
 
 AutomatedEmailFixture(
